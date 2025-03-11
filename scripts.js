@@ -1,4 +1,5 @@
 function isPalindrome(word){
+    word = word.toLowerCase() //Avoid case sensitivity
     let reversedWord = word.split("").reverse().join('')
 
     console.log(reversedWord)
