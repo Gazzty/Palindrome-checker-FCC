@@ -1,5 +1,10 @@
+function dataSanitization(data){
+    const regex = /[^a-zA-Z0-9]/g
+    return data.replace(regex, "")
+}
+
 function isPalindrome(word){
-    word = word.toLowerCase() //Avoid case sensitivity
+    word = dataSanitization(word).toLowerCase()
     let reversedWord = word.split("").reverse().join('')
 
     console.log(reversedWord)
